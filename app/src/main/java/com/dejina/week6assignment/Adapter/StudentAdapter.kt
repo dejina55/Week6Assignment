@@ -9,6 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.dejina.week6assignment.Model.Student
 import com.dejina.week6assignment.R
 
@@ -31,21 +32,21 @@ class StudentAdapter(val context: Context, val lstStudent: ArrayList<Student>) :
         holder.tvAddress.text = student.studentAddress.toString();
         holder.tvGender.text = student.studentGender.toString();
 
-        when (student.studentGender) {
-            "Male" -> {
-                genderImg = R.drawable.man
-            }
-            "Female" -> {
-                genderImg = R.drawable.woman;
-            }
-            "Other" -> {
-                genderImg = R.drawable.other;
-            }
-            //        Glide.with(context).load(student.profileImage).into(holder.imgProfile);
-        }
+//        when (student.studentGender) {
+//            "Male" -> {
+//                genderImg = R.drawable.man
+//            }
+//            "Female" -> {
+//                genderImg = R.drawable.woman;
+//            }
+//            "Other" -> {
+//                genderImg = R.drawable.other;
+//            }
+//            //        Glide.with(context).load(student.profileImage).into(holder.imgProfile);
+//        }
 
-        holder.imgProfile.setImageResource(genderImg);
-//        Glide.with(context).load(student.profileImage).into(holder.imgProfile);
+//        holder.imgProfile.setImageResource(genderImg);
+        Glide.with(context).load(student.DisplayPic).into(holder.imgProfile);
 
         holder.imgProfile.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
@@ -76,7 +77,7 @@ class StudentAdapter(val context: Context, val lstStudent: ArrayList<Student>) :
         val tvAddress: TextView
         val tvGender: TextView
         val tvAge: TextView
-        val btnDelete: Button
+        val btnDelete: ImageView
 
         init {
             imgProfile = view.findViewById(R.id.imgProfile);

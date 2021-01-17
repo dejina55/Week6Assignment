@@ -17,6 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Student Details"
+            android:textColor="@color/black"
             android:textAlignment="center"
             android:textSize="30dp"
             android:gravity="center_horizontal" />
@@ -29,6 +30,13 @@
             android:hint="Enter your Full name"
             android:inputType="text"
             android:nextFocusForward="@id/etAge" />
+
+
+        <EditText
+            android:id="@+id/etImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Image Url" />
 
         <EditText
             android:id="@+id/etAge"
@@ -79,11 +87,13 @@
             android:layout_height="wrap_content"
             android:hint="Address"
             android:inputType="text"
+            android:layout_marginTop="10dp"
             android:nextFocusForward="@id/btnSave" />
+
 
         <Button
             android:id="@+id/btnSave"
-            android:layout_width="300dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="5dp"

@@ -21,6 +21,7 @@ class StudentFragment : Fragment() {
     private lateinit var rdoFemale: RadioButton;
     private lateinit var rdoOther: RadioButton;
     private lateinit var btnSave: Button;
+    private lateinit var etImage: EditText;
 
 
     var gender: String ="";
@@ -50,6 +51,7 @@ class StudentFragment : Fragment() {
                     val fullname = etFullname.text.toString();
                     val address = etAddress.text.toString();
                     val age = etAge.text.toString();
+                    val img = etImage.text.toString();
                     if(rdoMale.isChecked){
                         gender="Male"
                     }
@@ -68,7 +70,7 @@ class StudentFragment : Fragment() {
 
                     }
 
-                    DashboardActivity.lisfOfStudent.add(Student(fullname,age,address,gender))
+                    DashboardActivity.lisfOfStudent.add(Student(fullname,age,address,gender,img))
                     Toast.makeText(
                         context,
                         "Student Added Successfully",
@@ -91,6 +93,8 @@ class StudentFragment : Fragment() {
         rdoFemale = view.findViewById(R.id.rdoFemale);
         rdoOther = view.findViewById(R.id.rdoOther);
         btnSave = view.findViewById(R.id.btnSave);
+        etImage = view.findViewById(R.id.etImage)
+
 
 
     }
@@ -103,6 +107,7 @@ class StudentFragment : Fragment() {
         rdoMale.isChecked = false;
         rdoFemale.isChecked = false;
         rdoOther.isChecked = false;
+        etImage.setText("");
 
     }
 

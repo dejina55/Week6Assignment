@@ -25,7 +25,7 @@ class HomeFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         recyclerView =view.findViewById(R.id.recyclerView)
 
-        Student("Reshika Shrestha","20","lokanthali","Female")
+        Student("Reshika Shrestha","20","lokanthali","Female", "")
         val adapter = StudentAdapter(this.context!!, DashboardActivity.lisfOfStudent)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this.context)

@@ -40,11 +40,9 @@ class DashboardActivity : AppCompatActivity() {
 
     private fun loadlist(){
         if (lisfOfStudent.size==0){
-            lisfOfStudent.add(Student("Reshika Shrestha", "20", "Bhaktapur", "Female"));
-            lisfOfStudent.add(Student("Meezu Lawot", "20", "Kathmandu", "Female"));
-            lisfOfStudent.add(Student("Salina Shrestha", "20", "Lalitpur", "Female"));
-            lisfOfStudent.add(Student("Ujjwal Lamichhane", "20", "Kathmandu", "Male"));
-            lisfOfStudent.add(Student("Yaman Subedi", "20", "Kathmandu", "Male"));
+            lisfOfStudent.add(Student("Reshika Shrestha", "20", "Bhaktapur", "Female","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCMT_qPKhiDRowoWLp1WnbOj1v0afyVw72CQ&usqp=CAU"));
+            lisfOfStudent.add(Student("Meezu Lawot", "20", "Kathmandu", "Female","https://recursosticmestre.com/pics/beautiful-girls-pics-for-profile-4.jpg"));
+
         }
     }
     companion object {
